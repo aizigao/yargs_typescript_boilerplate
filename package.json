@@ -1,0 +1,53 @@
+{
+  "name": "yargs_typescript_boilerplate",
+  "version": "1.0.0",
+  "description": "yargs typescript",
+  "scripts": {
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "create": "npm run build && npm run test",
+    "build": "tsc ",
+    "test": "sudo npm i -g && pizza",
+    "refresh": "rm -rf ./node_modules && yarn"
+  },
+  "main": "./lib/index.js",
+  "bin": {
+    "aizigao-test": "./lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aizigao/yargs_typescript_boilerplate.git"
+  },
+  "keywords": [],
+  "author": "aizigao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aizigao/yargs_typescript_boilerplate/issues"
+  },
+  "homepage": "https://github.com/aizigao/yargs_typescript_boilerplate#readme",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "clear": "^0.1.0",
+    "figlet": "^1.3.0",
+    "global": "^4.4.0",
+    "yargs": "^15.3.1",
+    "yargs_typescript_boilerplate": "file:./"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/node": "^13.9.2",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.7.0",
+    "typescript": "^3.8.3"
+  }
+}

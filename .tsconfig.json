@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "CommonJS",
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "declaration": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "outDir": "lib",
+    "rootDir": "src",
+    "strict": true,
+    "types": ["node"],
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "allowSyntheticDefaultImports": true
+  }
+}

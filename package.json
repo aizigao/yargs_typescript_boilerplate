@@ -5,10 +5,15 @@
   "scripts": {
     "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
     "create": "npm run build && npm run test",
-    "build": "tsc ",
+    "build": "tsc",
     "test": "sudo npm i -g && pizza",
     "refresh": "rm -rf ./node_modules && yarn"
   },
+  "files": [
+    "lib/**/*",
+    "!lib/**/*.test.js",
+    "!lib/**/*.spec.js"
+  ],
   "main": "./lib/index.js",
   "bin": {
     "aizigao-test": "./lib/index.js"

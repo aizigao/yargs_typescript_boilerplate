@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "CommonJS",
-    "lib": ["ESNext"],
-    "module": "ESNext",
+    "target": "esnext",
+    "lib": ["esnext"],
+    "module": "esnext",
     "declaration": true,
     "moduleResolution": "node",
     "importHelpers": true,
@@ -17,6 +17,11 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "allowSyntheticDefaultImports": true
-  }
+    "allowSyntheticDefaultImports": true,
+    "declarationMap": true
+  },
+  "include": [
+    "src/**/*",
+    "typing.d.ts"
+  ]
 }

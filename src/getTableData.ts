@@ -1,5 +1,6 @@
 import * as mysql from 'mysql'
 import * as _ from 'lodash'
+import { tranToMockjsStructure } from './utils'
 
 const con = mysql.createConnection({
   host: '127.0.0.1',
@@ -30,18 +31,19 @@ con.connect(function(err) {
         'COLUMN_NAME',
         'IS_NULLABLE',
       ])
-      return {
+      return tranToMockjsStructure({
         // TODO: add option use comment as name
         comment: itemData.COLUMN_COMMENT || itemData.COLUMN_NAME,
         value: itemData.COLUMN_NAME,
         // TODO: map mockjs type
         type: itemData.COLUMN_TYPE,
         default: itemData.COLUMN_DEFAULT,
-        isNullAble: itemData.IS_NULLABLE,
-      }
+        isNullable: itemData.IS_NULLABLE,
+      })
     })
     // console.log(result)
-    console.log({ tables })
+    console.log('result')
+    console.log(`{\n${tables.join('\n')}\n}`)
 
     // console.log(result[1].address)
     // console.log(result[3].name)

@@ -2,6 +2,7 @@
 import * as clear from 'clear'
 import * as chalk from 'chalk'
 import * as figlet from 'figlet'
+import './getTableData'
 
 clear()
 
